@@ -24,6 +24,7 @@ const path = require('path');
 
 
 const getBooks = async (req, res) => {
+    console.log(DB_HOST)
     
     const [rows] = await pool.query('SELECT * FROM libros')
     res.json(rows)
