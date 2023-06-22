@@ -16,6 +16,8 @@ app.use(express.urlencoded({extended: false}))
 //Routes
 app.use(require("./routes/index"));
 
+const host = '0.0.0.0'
 
-app.listen(PORT);
+
+app.listen(PORT, host);
 console.log(`Server running on port ${PORT}`);
