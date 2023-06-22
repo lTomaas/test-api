@@ -14,8 +14,8 @@ const path = require('path');
 
 const getBooks = async (req, res) => {
     
-    const response = await pool.query('SELECT * FROM libros')
-    res.status(200).json(response.rows)
+    const [rows] = await pool.query('SELECT * FROM libros')
+    res.json(rows)
     
 
     /*
