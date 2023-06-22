@@ -1,4 +1,6 @@
+/*
 const { Pool } = require("pg");
+
 
 const DB_HOST = process.env.DB_HOST || 'localhost'
 const DB_USER = process.env.DB_USER || 'root'
@@ -14,6 +16,17 @@ const pool = new Pool({
     database: DB_NAME,
     port: DB_PORT
 })
+*/
+
+import pg from "pg";
+const { Pool } = pg;
+
+dotenv.config();
+
+const databaseConfig = { connectionString: process.env.DATABASE_URL };
+const pool = new Pool(databaseConfig);
+
+export default pool;
 
 const path = require('path');
 
