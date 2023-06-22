@@ -1,11 +1,18 @@
 const { Pool } = require("pg");
 
+const DB_HOST = process.env.DB_HOST || 'localhost'
+const DB_USER = process.env.DB_USER || 'root'
+const DB_PASSWORD = process.env.DB_PASSWORD || 'faztpassword'
+const DB_NAME = process.env.DB_NAME || 'usersdb'
+const DB_PORT = process.env.DB_PORT || 3306
+
+
 const pool = new Pool({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'postgres',
-    password: process.env.DB_PASSWORD || 'admin',
-    database: process.env.DB_NAME || 'postgres',
-    port: process.env.DB_PORT || '5433'
+    host: DB_HOST,
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME,
+    port: DB_PORT
 })
 
 const path = require('path');
