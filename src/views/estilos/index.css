@@ -1,0 +1,57 @@
+body{
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    background-color: rgb(105, 105, 105);
+}
+
+.nav{
+    display: flex;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.863);
+    
+}
+
+.nav a{
+    padding: 10px;
+    text-decoration: none;
+    color: rgba(248, 252, 255, 0.842);
+    align-self: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    margin-top: 40px;
+    font-size: 8px;
+    text-align: center;
+    border-collapse: collapse;
+    width: 50%;
+    border: solid 2px black
+}
+
+th, td{
+    padding: 5px;
+}
+
+thead{
+    background-color: #246355;
+    border-bottom: solid 3px #0F362D;
+    color: white;
+}
+
+
+tbody{
+    background-color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: #369681;
+    color: white;
+}
